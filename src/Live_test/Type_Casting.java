@@ -5,8 +5,12 @@ public class Type_Casting {
         int a=10;
         float b=3.5f;
         //Expression result: 23 Implicit casting: 13.5 Explicit casting: 13
-        b=a+b; //implicit cast
-        System.out.println("Implicit casting :" +b);
-        //int b1=int(b);
+        float implicit=a+b;
+        System.out.println("Implicit casting: "+implicit);
+        int explicit=a+(int)b;
+        System.out.println("Explicit casting: "+explicit);
+        float expressionresult=a+explicit;
+        System.out.println("Expression result: "+expressionresult);
+
     }
 }
