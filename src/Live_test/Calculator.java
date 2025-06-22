@@ -4,33 +4,48 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
-        System.out.println("Enter num1");
-        int num1=s.nextInt();
-        System.out.println("Enter num2");
-        int num2=s.nextInt();
-        //double add=addition(num1:15.5,num2:14.5);
+        Scanner scanner = new Scanner(System.in);
+
+        // Input first number
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+
+        // Input second number
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+
+        // Input operator
+        System.out.print("Choose operation (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+
+        double result;
+
+        // Perform calculation using switch
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                System.out.println("Result: " + result);
+                break;
+            case '-':
+                result = num1 - num2;
+                System.out.println("Result: " + result);
+                break;
+            case '*':
+                result = num1 * num2;
+                System.out.println("Result: " + result);
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    System.out.println("Result: " + result);
+                } else {
+                    System.out.println("Error: Cannot divide by zero!");
+                }
+                break;
+            default:
+                System.out.println("Invalid operator. Please use +, -, *, or /.");
         }
-        public static double addition(int num1,int num2) {
-        return num1+num2;
-
-        }
-        public static int subtraction(int num1,int num2) {
-        return num1-num2;
-
-        }
-        public static int multipliplication(int num1,int num2) {
-        return num1*num2;
-
-       }
-       public static int division(int num1,int num2) {
-        return num1/num2;
-
-       }
-      public static int modulus(int num1,int num2) {
-        return num1%num2;
-
-       }
+    }
 
 
-}
+    }
