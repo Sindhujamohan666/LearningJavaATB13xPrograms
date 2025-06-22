@@ -13,6 +13,8 @@ public class Switch_days {
             case 5->System.out.println("Friday");
             case 6->System.out.println("Saturday");
             case 7->System.out.println("Sunday");
+            case 8->System.out.println("Invalid day");
+
 
         }
 
