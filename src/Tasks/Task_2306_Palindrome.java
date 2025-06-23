@@ -16,7 +16,7 @@ public class Task_2306_Palindrome {
         for(int i=word.length()-1;i>=0;i--) {
             reversed += word.charAt(i);
         }
-        if(word.equals(reversed)){
+        if(word.equals(reversed)){ //compare strings using equals and not ==
             System.out.println(word + " is a palindrome");
         }
         else{
