@@ -1,6 +1,6 @@
 package Tasks;
 import java.util.Scanner;
-public class Convert_Days_to_Years_Months_Days {
+public class Task2708_Convert_Days_to_Years_Months_Days {
     public static void main(String[] args) {
         //if you input 1000 days, the output of the program would be:
         // 2 years, 9 months, and 0 days.
