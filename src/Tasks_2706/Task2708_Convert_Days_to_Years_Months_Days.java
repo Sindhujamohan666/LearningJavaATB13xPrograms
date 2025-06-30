@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks_2706;
 import java.util.Scanner;
 public class Task2708_Convert_Days_to_Years_Months_Days {
     public static void main(String[] args) {
