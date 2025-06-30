@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks2306;
 import java.util.Scanner;
 public class Task_2306_vote_Eligibility {
     public static void main(String[] args) {
