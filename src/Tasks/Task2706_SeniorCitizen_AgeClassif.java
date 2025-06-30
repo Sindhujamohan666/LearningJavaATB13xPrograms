@@ -1,4 +1,4 @@
-package Tasks_2706;
+package Tasks;
 import java.util.Scanner;
 public class Task2706_SeniorCitizen_AgeClassif {
     public static void main(String[] args) {

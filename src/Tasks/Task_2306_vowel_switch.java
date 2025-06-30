@@ -1,4 +1,4 @@
-package Tasks2306;
+package Tasks;
 import java.util.Scanner;
 public class Task_2306_vowel_switch {
     public static void main(String[] args) {
