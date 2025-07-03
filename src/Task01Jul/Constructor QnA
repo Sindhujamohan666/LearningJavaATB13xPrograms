@@ -1,0 +1,122 @@
+1. What is a constructor in Java?
+Ans:A constructor in Java is a special method used to initialize objects when they are created.
+ It's called automatically when you use the new keyword to create an instance of a class.
+
+2. How is a constructor different from a method?
+Feature	         Constructor	                                       Method
+🧱 Purpose	     Used to initialize a new object	                   Used to define behavior or actions of an object
+🧩 Name	         Must be the same as the class name	                   Can be any valid identifier (usually a verb)
+🔙 Return Type	 No return type (not even void)	                       Must have a return type (void, int, String, etc.)
+🚀 Invocation	 Called automatically when object is created	       Called explicitly using the object or class name
+🔁 Inheritance	 Not inherited by subclasses (but can be chained)      Inherited and can be overridden in subclasses
+🏗 Example	     Car() { ... }	                                       startEngine() { ... }
+
+3. What are the different types of constructors in Java?
+    1. Default Constructor(No-Argument Constructor)
+    2. Parameterized Constructor
+
+4. What is constructor overloading?
+Ans: Constructor overloading in Java means having more than one constructor in the same class,
+with each constructor having a different number or type of parameters.
+
+It's a form of polymorphism that allows you to create objects in different ways based on
+what information you have at the time of creation.
+Example:
+public class Student {
+    String name;
+    int age;
+
+    // Default constructor
+    public Student() {
+        name = "Unknown";
+        age = 0;
+    }
+
+    // Constructor with one parameter
+    public Student(String name) {
+        this.name = name;
+        age = 0;
+    }
+
+    // Constructor with two parameters
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+
+5. Can a constructor be final, static, or abstract?
+
+  final	     No	Constructors can't be overridden(no use of making it final)
+  static	 No	Constructors are tied to objects
+  abstract	 No	Constructors aren't inherited
+
+
+6. Can we call a constructor explicitly inside another constructor?
+Ans: Yes, absolutely! In Java, you can call one constructor from another constructor
+ in the same class using the keyword this() — this is called constructor chaining.
+Example:
+public class Student {
+    String name;
+    int age;
+
+    // Constructor 1: default
+    public Student() {
+        this("Unknown", 0); // calling Constructor 2
+        System.out.println("Default constructor called");
+    }
+
+    // Constructor 2: parameterized
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("Parameterized constructor called");
+    }
+}
+
+7. What happens if you don’t define a constructor in a class?
+Ans : If you don’t define any constructor in a Java class, the
+Java compiler automatically provides a default constructor.
+
+Program 1 : What is a default constructor? Give one example, Write a code for that.
+Ans: A default constructor is a constructor that takes no parameters.
+It is used to create an object with default values.
+class MyClass {
+public:
+    int x;
+    MyClass() {  // default constructor
+        x = 0;
+    }
+};
+
+Program 2: How do you create a parameterized constructor? Give one example, Write a code for that.
+Ans: A parameterized constructor is a constructor that takes one or more arguments
+ to initialize an object with specific values.
+ Example:
+ #include <iostream>
+ using namespace std;
+
+ class Student {
+ public:
+     string name;
+     int age;
+
+     // Parameterized constructor
+     Student(string n, int a) {
+         name = n;
+         age = a;
+     }
+
+     void display() {
+         cout << "Name: " << name << ", Age: " << age << endl;
+     }
+ };
+
+ int main() {
+     // Creating an object using parameterized constructor
+     Student s1("Alice", 20);
+     s1.display();
+
+     return 0;
+ }
