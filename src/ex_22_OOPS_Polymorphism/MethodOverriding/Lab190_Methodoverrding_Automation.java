@@ -8,6 +8,13 @@ public class Lab190_Methodoverrding_Automation {
         ft.OpenBrowser();
         commontoAll ca=new commontoAll();
         ca.OpenBrowser();
+        // Dynamic Dispatch
+        commontoAll c2 = new ChromeTC();
+        c2.OpenBrowser();
+
+        commontoAll c3 = new FireFoxTC();
+        c3.OpenBrowser();
+
     }
 
 }
