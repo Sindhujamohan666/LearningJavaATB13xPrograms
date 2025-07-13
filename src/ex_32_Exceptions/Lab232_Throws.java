@@ -1,0 +1,17 @@
+package ex_32_Exceptions;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class Lab232_Throws {
+    public static void main(String[] args) {
+    }
+    // Handling file exception in method using throws
+        static void t () throws FileNotFoundException {
+            FileInputStream fileInputStream = new FileInputStream("C://a.txt");
+        }
+
+    }
+
